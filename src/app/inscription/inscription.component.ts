@@ -3,10 +3,10 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  templateUrl: './inscription.component.html',
+  styleUrls: ['./inscription.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class InscriptionComponent implements OnInit {
 messageForm: FormGroup;
 submitted = false;
 success = false;
