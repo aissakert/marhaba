@@ -1,1 +1,53 @@
-<p>about works!</p>
+<h1 xmlns="http://www.w3.org/1999/html">Login :</h1>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+  <h5 *ngIf="success">Your form is valid!</h5>
+  <div class="container-fluid">
+
+    <div class="row p-4">
+      <div class="input-group">
+        <div class="col-3">Email :</div>
+        <div class="col-4">
+          <input type="text" formControlName="email" class="form-control">
+          <div *ngIf="submitted && loginForm.controls.email.errors" class="alert-danger">
+            <div *ngIf="loginForm.controls.email.errors.required">Votre adresse email est requise.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row p-4">
+      <div class="input-group">
+        <div class="col-3">Password :</div>
+        <div class="col-4">
+          <input type="password" formControlName="password" class="form-control">
+          <div *ngIf="submitted && loginForm.controls.password.errors" class="alert-danger">
+            <div *ngIf="loginForm.controls.password.errors.required">Votre Mot de passe est requis.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row p-4">
+      <div class="col-4 text-center">
+        <input type="submit" value="Valider" class="cta">
+      </div>
+      <div class="col-3  text-center">
+        <input type="reset" value="Annuler" class="cta">
+      </div>
+    </div>
+  </div>
+</form>
+
+<!--
+<div *ngIf="submitted" class="results">
+  <strong>Name:</strong>
+  <span>{{ messageForm.controls.name.value }}</span>
+
+  <strong>Message:</strong>
+  <span>{{ messageForm.controls.message.value }}</span>
+</div>
+-->
+
