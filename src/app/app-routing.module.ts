@@ -8,7 +8,7 @@ import {InscriptionComponent} from './inscription/inscription.component';
 const routes: Routes = [
   { path:'',component:HomeComponent},
   { path:'login',component:LoginComponent},
-  { path:'inscription',component:InscriptionComponent},
+  { path:'inscription',component:InscriptionComponent}
 ];
 
 @NgModule({

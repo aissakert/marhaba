@@ -5,7 +5,17 @@
       <ul>
         <li><a routerLink="/">Home</a></li>
         <li><a routerLink="/inscription">Inscription</a></li>
-        <li><a routerLink="/login">Se connecter</a></li>
+        
+        <li>
+        
+          <div *ngIf='isConnected()'>
+            <a> {{connectedUser.nom}}</a>
+          </div>
+          <div *ngIf='!isConnected()'>
+            <a routerLink="/login">Se connecter</a>
+          </div>
+                 
+        </li>
 
       </ul>
     </nav>
